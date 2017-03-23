@@ -1,0 +1,66 @@
+/*
+ * Programmer: Umai Balendra
+*/
+
+package myattendancetaker;
+/**
+ *
+ * @author Goodluck
+ */
+
+import java.io.*;
+import java.util.*;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.SwingUtilities;
+import javax.swing.table.TableModel;
+
+
+public class MyAttendanceTaker extends JFrame {
+
+    /**
+     * @param args the command line arguments
+     */
+    //public static void main(String[] args) throws IOException{
+    {
+        // TODO code application logic here
+        //Create the headings for the attendance table:
+        String[] columnHeaders = {"First Name",
+            "Last Name",
+            "Present"};
+        //Input the data to be used inside the columns
+        Object[][] myData = {
+            {"Samantha", "Harvey", (false)},
+            {"Simran", "Gupta",(true)},
+            {"Micheal", "Tran", (true)}
+        };
+        {        
+        //Make data table
+        JTable myTable = new JTable(myData, columnHeaders);
+        this.add(new JScrollPane(myTable));
+
+        this.setName("Attendance Tracking Sheet");//sets the name
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//makes sure program closes on click
+        this.pack();
+        this.setVisible(true);//makes  visible because was initially existing but not visible
+    }
+        
+        
+        
+        //Create a constant array that contains these classes
+//        final myClass[] columnCase= new Class[]{
+//            Integer.class, String.class. Double.class, Boolean.class
+//        };
+//        @Override
+//        public boolean editThisCell(int rows, int columns){
+//        return false;
+//    }
+//        @Override
+//        public Class<?> getColumnCase(int columnIndx)
+//        {
+//            return columnCase[columnIndx];
+//        }
+//    };
+        }
+}
